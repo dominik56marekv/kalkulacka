@@ -1,0 +1,41 @@
+using System;
+
+namespace Kalkulacka_Marek_Domik
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        Console.WriteLine("vítej v kalkulačce");
+
+        Console.WriteLine("Zadejte prosím první číslo:");
+                float a = float.Parse(Console.ReadLine());
+        Console.WriteLine("Zadejte druhé číslo:");
+                float b = float.Parse(Console.ReadLine());
+        Console.WriteLine("Zvolte si operaci:");
+        Console.WriteLine("1 - sčítání");
+        Console.WriteLine("2 - odčítání");
+        Console.WriteLine("3 - násobení");
+        Console.WriteLine("4 - dělení");
+            int vyber = int.Parse(Console.ReadLine());
+            float vysledek = 0;
+            switch (vyber)
+            {
+                case 1:
+                    vysledek = a + b;
+                    break;
+                case 2:
+                    vysledek = a - b;
+                    break;
+                case 3:
+                    vysledek = a * b;
+                    break;
+                case 4:
+                    vysledek = a / b;
+                    break;
+            }
+            if ((vyber > 0) && (vyber < 5))
+                Console.WriteLine("Výsledek: {0}", vysledek);
+            else
+                Console.WriteLine("Spatně");
+            Console.WriteLine("Děkuji za používání kalkulačky");
